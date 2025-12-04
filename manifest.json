@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Eye Buddy",
+  "version": "1.0",
+  "description": "Réduisez la fatigue visuelle avec la règle des 20-20-20.",
+  "permissions": [
+    "alarms",
+    "storage",
+    "notifications",
+    "scripting",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Eye Buddy"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
