@@ -1,10 +1,14 @@
 // content.js
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.action === 'SHOW_OVERLAY') {
-        showOverlay();
-    }
-});
+if (!window.eyeBuddyInitialized) {
+    window.eyeBuddyInitialized = true;
+
+    chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+        if (request.action === 'SHOW_OVERLAY') {
+            showOverlay();
+        }
+    });
+}
 
 function showOverlay() {
     // Check if overlay already exists
@@ -20,12 +24,24 @@ function createOverlay(duration) {
     const overlay = document.createElement('div');
     overlay.id = 'eye-buddy-overlay';
 
+    // Get current time
+    const now = new Date();
+    const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
     overlay.innerHTML = `
     <div id="eye-buddy-content">
-      <div id="eye-buddy-title">Pause Visuelle</div>
-      <div id="eye-buddy-message">Regardez un objet à 6 mètres pendant 20 secondes.</div>
-      <div id="eye-buddy-timer">${duration}</div>
-      <button id="eye-buddy-skip">Passer</button>
+      <div id="eye-buddy-time-display">Current time is ${timeString}</div>
+      <div id="eye-buddy-title">Relax those eyes</div>
+      <div id="eye-buddy-message">Set your eyes on something distant until the countdown is over</div>
+      <div id="eye-buddy-timer">00:${duration < 10 ? '0' + duration : duration}</div>
+      
+      <div class="eye-buddy-actions">
+        <button id="eye-buddy-skip" class="eye-buddy-btn">
+          <span>»</span> Skip
+        </button>
+      </div>
+      
+      <div id="eye-buddy-footer">Press Esc to skip</div>
     </div>
   `;
 
@@ -36,7 +52,12 @@ function createOverlay(duration) {
 
     const interval = setInterval(() => {
         timeLeft--;
-        if (timerElement) timerElement.textContent = timeLeft;
+        // Format time as MM:SS
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        const formattedTime = `${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+
+        if (timerElement) timerElement.textContent = formattedTime;
 
         if (timeLeft <= 0) {
             clearInterval(interval);
@@ -45,10 +66,23 @@ function createOverlay(duration) {
     }, 1000);
 
     // Skip button functionality
-    document.getElementById('eye-buddy-skip').addEventListener('click', () => {
-        clearInterval(interval);
-        removeOverlay();
-    });
+    const skipBtn = document.getElementById('eye-buddy-skip');
+    if (skipBtn) {
+        skipBtn.addEventListener('click', () => {
+            clearInterval(interval);
+            removeOverlay();
+        });
+    }
+
+    // Esc key functionality
+    const escListener = (e) => {
+        if (e.key === 'Escape') {
+            clearInterval(interval);
+            removeOverlay();
+            document.removeEventListener('keydown', escListener);
+        }
+    };
+    document.addEventListener('keydown', escListener);
 }
 
 function removeOverlay() {

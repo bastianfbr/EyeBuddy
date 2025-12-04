@@ -1,56 +1,117 @@
 /* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
 #eye-buddy-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 69, 0, 0.95); /* Red/Orange with opacity */
-  z-index: 2147483647; /* Max z-index */
+  /* Deep purple/violet gradient background */
+  background: linear-gradient(135deg, #4c3b71 0%, #2a2a40 100%);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  z-index: 2147483647;
+  /* Max z-index */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  pointer-events: all; /* Block interactions */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  pointer-events: all;
+  backdrop-filter: blur(5px);
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #eye-buddy-content {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 600px;
+  width: 90%;
+}
+
+#eye-buddy-time-display {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  font-weight: 300;
 }
 
 #eye-buddy-title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #eye-buddy-message {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 300;
   margin-bottom: 2rem;
 }
 
 #eye-buddy-timer {
-  font-size: 4rem;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 1rem 2rem;
-  border-radius: 10px;
+  font-size: 5rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  margin: 1rem 0;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-#eye-buddy-skip {
-  margin-top: 2rem;
-  padding: 10px 20px;
-  background: transparent;
-  border: 2px solid white;
+.eye-buddy-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.eye-buddy-btn {
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
   cursor: pointer;
   font-size: 1rem;
-  border-radius: 5px;
-  transition: background 0.3s;
+  border-radius: 50px;
+  /* Pill shape */
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
 }
 
-#eye-buddy-skip:hover {
-  background: rgba(255, 255, 255, 0.2);
+.eye-buddy-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.eye-buddy-btn:active {
+  transform: translateY(0);
+}
+
+#eye-buddy-footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  opacity: 0.5;
 }
