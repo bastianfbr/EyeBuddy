@@ -14,7 +14,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.get(['workDuration', 'restDuration'], (result) => {
     const workDuration = result.workDuration || DEFAULT_SETTINGS.workDuration;
     const restDuration = result.restDuration || DEFAULT_SETTINGS.restDuration;
-    
+
     // Save defaults if not present
     if (!result.workDuration || !result.restDuration) {
       chrome.storage.sync.set({
@@ -71,5 +71,12 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
   if (namespace === 'sync' && changes.workDuration) {
     const newDuration = changes.workDuration.newValue;
     startTimer(newDuration);
+  }
+});
+
+// Listen for messages from popup
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'TRIGGER_BREAK') {
+    triggerBreak();
   }
 });
