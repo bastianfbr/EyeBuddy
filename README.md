@@ -4,7 +4,6 @@
 > L'extension Chrome ultime pour appliquer la règle des 20-20-20 et réduire la fatigue visuelle.
 
 ![Eye Buddy Banner](https://via.placeholder.com/1200x400/18121E/FF5ACD?text=Eye+Buddy+Preview)
-*(Remplacez ce lien par une vraie capture d'écran de votre superbe overlay !)*
 
 ---
 
@@ -28,7 +27,7 @@ Nous passons tous trop de temps devant nos écrans. La fatigue oculaire numériq
 
 | L'Écran de Pause (Overlay) | Le Menu Rapide (Popup) |
 |:--------------------------:|:----------------------:|
-| ![Overlay](https://via.placeholder.com/400x300/18121E/FF5ACD?text=Overlay+Zen) | ![Popup](https://via.placeholder.com/250x300/18121E/FBDA61?text=Menu+Popup) |
+| ![Overlay](images/overlay.png) | ![Popup](images/extension.png) |
 | *Un flou artistique et un minuteur élégant.* | *Accès rapide pour une pause immédiate.* |
 
 ---
@@ -39,7 +38,7 @@ Pour l'instant, Eye Buddy est en phase de développement. Voici comment l'instal
 
 1.  **Clonez ce dépôt** :
     ```bash
-    git clone https://github.com/votre-username/EyeBuddy.git
+    git clone https://github.com/bastianfbr/EyeBuddy.git
     ```
 2.  Ouvrez votre navigateur et allez sur la page des extensions :
     *   Chrome : `chrome://extensions`
