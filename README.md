@@ -3,7 +3,7 @@
 > **Protégez vos yeux avec style.**  
 > L'extension Chrome ultime pour appliquer la règle des 20-20-20 et réduire la fatigue visuelle.
 
-![Eye Buddy Banner](https://via.placeholder.com/1200x400/18121E/FF5ACD?text=Eye+Buddy+Preview)
+![Eye Buddy Overlay](images/overlay.png)
 
 ---
 
@@ -23,12 +23,13 @@ Nous passons tous trop de temps devant nos écrans. La fatigue oculaire numériq
 
 ---
 
-## 📸 Aperçu
+## 📸 Aperçu du Menu
 
-| L'Écran de Pause (Overlay) | Le Menu Rapide (Popup) |
-|:--------------------------:|:----------------------:|
-| ![Overlay](images/overlay.png) | ![Popup](images/extension.png) |
-| *Un flou artistique et un minuteur élégant.* | *Accès rapide pour une pause immédiate.* |
+![Menu Extension](images/extension.png)
+
+Le menu de l'extension (Popup) est votre centre de contrôle rapide :
+*   **Pause Immédiate** : Lancez instantanément l'écran de relaxation pour tester l'effet ou prendre une pause volontaire.
+*   **Informations** : Accédez à la page de configuration pour ajuster les durées et en savoir plus sur la règle des 20-20-20.
 
 ---
 
