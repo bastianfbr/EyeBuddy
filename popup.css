@@ -1,62 +1,74 @@
 /* popup.css */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
 
 body {
-    width: 250px;
-    padding: 20px;
+    width: 260px;
+    padding: 25px;
     font-family: 'Outfit', sans-serif;
     text-align: center;
-    /* Dark Modern Fun Gradient */
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    /* Dark Plum Background */
+    background: #18121E;
     color: white;
     margin: 0;
 }
 
 h2 {
     margin-top: 0;
-    margin-bottom: 5px;
-    font-weight: 600;
-    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 1.8rem;
+    /* Pink to Yellow Gradient */
+    background: linear-gradient(to right, #FF5ACD 0%, #FBDA61 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 4px 15px rgba(255, 90, 205, 0.3);
 }
 
 p {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 25px;
+    font-weight: 300;
 }
 
 button {
     width: 100%;
-    padding: 12px;
-    margin-top: 10px;
+    padding: 14px;
+    margin-top: 12px;
     border: none;
-    border-radius: 12px;
+    border-radius: 16px;
     cursor: pointer;
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
-    transition: all 0.2s ease;
+    font-size: 1rem;
+    /* Smooth transform transition */
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 #breakNow {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+    /* Pink to Yellow Gradient Button */
+    background: linear-gradient(135deg, #FF5ACD 0%, #FBDA61 100%);
+    color: #18121E;
+    /* Dark text for contrast on bright gradient */
+    box-shadow: 0 4px 15px rgba(255, 90, 205, 0.4);
 }
 
 #breakNow:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(118, 75, 162, 0.6);
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 90, 205, 0.6);
 }
 
 #openOptions {
     background: rgba(255, 255, 255, 0.1);
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
 }
 
 #openOptions:hover {
     background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.03);
 }

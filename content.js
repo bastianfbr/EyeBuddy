@@ -83,25 +83,6 @@ function createOverlay(duration) {
         }
     };
     document.addEventListener('keydown', escListener);
-
-    // Parallax / Tilt Effect
-    const content = document.getElementById('eye-buddy-content');
-    if (content) {
-        document.addEventListener('mousemove', (e) => {
-            if (!document.getElementById('eye-buddy-overlay')) return;
-
-            const { clientX, clientY } = e;
-            const { innerWidth, innerHeight } = window;
-
-            // Calculate rotation (max 15 degrees)
-            const xRotation = ((clientY - innerHeight / 2) / innerHeight) * 20; // Rotate X based on Y axis
-            const yRotation = ((clientX - innerWidth / 2) / innerWidth) * 20;   // Rotate Y based on X axis
-
-            // Apply transform
-            // Note: RotateX is inverted to feel natural (mouse up -> look up)
-            content.style.transform = `rotateX(${-xRotation}deg) rotateY(${yRotation}deg)`;
-        });
-    }
 }
 
 function removeOverlay() {
