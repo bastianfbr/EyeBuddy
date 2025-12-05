@@ -11,7 +11,7 @@
 
 Découvrez Eye Buddy en action :
 
-![Eye Buddy Overlay](assets/eyebuddy.mp4)
+![Eye Buddy Demo](assets/eyebuddy.gif)
 
 ---
 
