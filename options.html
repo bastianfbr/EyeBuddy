@@ -3,80 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Options Eye Buddy</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 20px;
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: #f4f4f9;
-      color: #333;
-    }
-    h1 {
-      color: #ff4500;
-      border-bottom: 2px solid #ff4500;
-      padding-bottom: 10px;
-    }
-    .form-group {
-      margin-bottom: 20px;
-      background: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-    input[type="number"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    button {
-      background-color: #ff4500;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-      width: 100%;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background-color: #e03e00;
-    }
-    #status {
-      margin-top: 10px;
-      text-align: center;
-      color: green;
-      font-weight: bold;
-      opacity: 0;
-      transition: opacity 0.5s;
-    }
-  </style>
+  <link rel="stylesheet" href="options.css">
 </head>
 <body>
-  <h1>Configuration Eye Buddy</h1>
-  
-  <div class="form-group">
-    <label for="workDuration">Durée de travail (minutes) :</label>
-    <input type="number" id="workDuration" min="1" max="120">
-    <small>Temps entre chaque pause.</small>
-  </div>
+  <div class="container">
+    <h1>Configuration Eye Buddy</h1>
+    
+    <div class="form-group">
+      <label for="workDuration">Durée de travail (minutes) :</label>
+      <input type="number" id="workDuration" min="1" max="120">
+      <small>Temps entre chaque pause.</small>
+    </div>
 
-  <div class="form-group">
-    <label for="restDuration">Durée de pause (secondes) :</label>
-    <input type="number" id="restDuration" min="5" max="300">
-    <small>Durée de l'écran de pause.</small>
-  </div>
+    <div class="form-group">
+      <label for="restDuration">Durée de pause (secondes) :</label>
+      <input type="number" id="restDuration" min="5" max="300">
+      <small>Durée de l'écran de pause.</small>
+    </div>
 
-  <button id="save">Enregistrer</button>
-  <div id="status">Options sauvegardées !</div>
+    <button id="save">Enregistrer</button>
+    <div id="status">Options sauvegardées !</div>
+  </div>
 
   <script src="options.js"></script>
 </body>

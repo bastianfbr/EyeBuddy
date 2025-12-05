@@ -30,18 +30,18 @@ function createOverlay(duration) {
 
     overlay.innerHTML = `
     <div id="eye-buddy-content">
-      <div id="eye-buddy-time-display">Current time is ${timeString}</div>
-      <div id="eye-buddy-title">Relax those eyes</div>
-      <div id="eye-buddy-message">Set your eyes on something distant until the countdown is over</div>
+      <div id="eye-buddy-time-display">Il est ${timeString}</div>
+      <div id="eye-buddy-title">Détendez vos yeux</div>
+      <div id="eye-buddy-message">Regardez au loin, détendez-vous et respirez jusqu'à la fin du compte à rebours.</div>
       <div id="eye-buddy-timer">00:${duration < 10 ? '0' + duration : duration}</div>
       
       <div class="eye-buddy-actions">
         <button id="eye-buddy-skip" class="eye-buddy-btn">
-          <span>»</span> Skip
+          <span>»</span> Passer
         </button>
       </div>
       
-      <div id="eye-buddy-footer">Press Esc to skip</div>
+      <div id="eye-buddy-footer">Appuyez sur Échap pour passer</div>
     </div>
   `;
 
