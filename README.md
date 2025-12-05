@@ -27,7 +27,6 @@ Nous passons tous trop de temps devant nos écrans. La fatigue oculaire numériq
 *   **🌫️ Ambiance Zen** : Un fond animé avec un flou gaussien apaisant pour une immersion totale.
 *   **🔔 Notifications Discrètes** : Soyez averti en douceur quand il est temps de reposer vos yeux.
 *   **🔒 Règle Stricte** : Pas de configuration complexe, l'extension applique strictement le rythme optimal.
-*   **🖱️ Effet Parallax 3D** : L'interface réagit subtilement aux mouvements de votre souris pour un effet de profondeur unique.
 
 ---
 
