@@ -14,10 +14,8 @@ function showOverlay() {
     // Check if overlay already exists
     if (document.getElementById('eye-buddy-overlay')) return;
 
-    chrome.storage.sync.get(['restDuration'], (result) => {
-        const restDuration = result.restDuration || 20;
-        createOverlay(restDuration);
-    });
+    // Fixed 20 seconds duration
+    createOverlay(20);
 }
 
 function createOverlay(duration) {

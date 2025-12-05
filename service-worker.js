@@ -2,29 +2,14 @@
 
 const ALARM_NAME = 'eye-buddy-timer';
 
-// Default configuration
-const DEFAULT_SETTINGS = {
-  workDuration: 20, // minutes
-  restDuration: 20  // seconds
-};
+// Fixed configuration (20-20-20 rule)
+const WORK_DURATION_MINUTES = 20;
+const REST_DURATION_SECONDS = 20;
 
 // Initialize on install
 chrome.runtime.onInstalled.addListener(() => {
   console.log('Eye Buddy installed.');
-  chrome.storage.sync.get(['workDuration', 'restDuration'], (result) => {
-    const workDuration = result.workDuration || DEFAULT_SETTINGS.workDuration;
-    const restDuration = result.restDuration || DEFAULT_SETTINGS.restDuration;
-
-    // Save defaults if not present
-    if (!result.workDuration || !result.restDuration) {
-      chrome.storage.sync.set({
-        workDuration: workDuration,
-        restDuration: restDuration
-      });
-    }
-
-    startTimer(workDuration);
-  });
+  startTimer(WORK_DURATION_MINUTES);
 });
 
 // Function to start the alarm
@@ -42,7 +27,6 @@ chrome.alarms.onAlarm.addListener((alarm) => {
   }
 });
 
-// Trigger the break
 // Trigger the break
 async function triggerBreak() {
   // Show notification
@@ -83,14 +67,6 @@ async function triggerBreak() {
     }
   }
 }
-
-// Listen for changes in settings to restart timer
-chrome.storage.onChanged.addListener((changes, namespace) => {
-  if (namespace === 'sync' && changes.workDuration) {
-    const newDuration = changes.workDuration.newValue;
-    startTimer(newDuration);
-  }
-});
 
 // Listen for messages from popup
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {

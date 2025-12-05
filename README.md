@@ -18,7 +18,7 @@ Nous passons tous trop de temps devant nos écrans. La fatigue oculaire numériq
 *   **🎨 Design Premium "Dark Plum"** : Une interface sombre et élégante avec des dégradés vibrants Rose/Jaune, inspirée des meilleures apps de méditation.
 *   **🌫️ Ambiance Zen** : Un fond animé avec un flou gaussien apaisant pour une immersion totale.
 *   **🔔 Notifications Discrètes** : Soyez averti en douceur quand il est temps de reposer vos yeux.
-*   **⚙️ 100% Configurable** : Ajustez les durées de travail et de pause selon vos besoins.
+*   **🔒 Règle Stricte** : Pas de configuration complexe, l'extension applique strictement le rythme optimal de 20 minutes / 20 secondes.
 *   **🖱️ Effet Parallax 3D** : L'interface réagit subtilement aux mouvements de votre souris pour un effet de profondeur unique.
 
 ---
@@ -29,7 +29,7 @@ Nous passons tous trop de temps devant nos écrans. La fatigue oculaire numériq
 
 Le menu de l'extension (Popup) est votre centre de contrôle rapide :
 *   **Pause Immédiate** : Lancez instantanément l'écran de relaxation pour tester l'effet ou prendre une pause volontaire.
-*   **Informations** : Accédez à la page de configuration pour ajuster les durées et en savoir plus sur la règle des 20-20-20.
+*   **Informations** : Apprenez plus sur la règle des 20-20-20 et comment elle peut vous aider.
 
 ---
 
