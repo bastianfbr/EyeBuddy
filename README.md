@@ -103,4 +103,10 @@ Les yeux fatigués du monde entier vous remercieront ! N'hésitez pas à propose
 
 ---
 
+## 📄 Licence
+
+Ce projet est sous licence **GPLv3**. Voir le fichier [LICENSE](LICENSE) pour le texte complet.
+
+---
+
 *Fait par bastianfbr* 🌟
