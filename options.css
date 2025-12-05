@@ -35,6 +35,47 @@ h1 {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
+.info-block {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.info-block h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #FF5ACD;
+    margin-bottom: 15px;
+}
+
+.info-block p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+}
+
+.info-block ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.info-block li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-block strong {
+    color: #FBDA61;
+}
+
 .form-group {
     margin-bottom: 25px;
     background: transparent;

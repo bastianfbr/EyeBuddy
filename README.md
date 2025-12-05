@@ -1,33 +1,74 @@
-# Eye Buddy
+# 👁️ Eye Buddy
 
-Eye Buddy est une extension Google Chrome conçue pour réduire la fatigue visuelle en appliquant la règle des 20-20-20.
+> **Protégez vos yeux avec style.**  
+> L'extension Chrome ultime pour appliquer la règle des 20-20-20 et réduire la fatigue visuelle.
 
-## Fonctionnalités
+![Eye Buddy Banner](https://via.placeholder.com/1200x400/18121E/FF5ACD?text=Eye+Buddy+Preview)
+*(Remplacez ce lien par une vraie capture d'écran de votre superbe overlay !)*
 
-- **Règle 20-20-20** : Toutes les 20 minutes, une pause de 20 secondes est imposée.
-- **Overlay Bloquant** : Un écran rouge/orange apparaît pour vous forcer à détourner le regard.
-- **Notifications** : Une notification système vous avertit du début de la pause.
-- **Configuration** : Personnalisez les durées de travail et de pause via la page d'options.
-- **Arrière-plan** : Fonctionne même si le navigateur est minimisé grâce au Service Worker.
+---
 
-## Installation
+## ✨ Pourquoi Eye Buddy ?
 
-1. Clonez ce dépôt.
-2. Ouvrez Google Chrome et allez sur `chrome://extensions`.
-3. Activez le "Mode développeur" (en haut à droite).
-4. Cliquez sur "Charger l'extension non empaquetée".
-5. Sélectionnez le dossier du projet `EyeBuddy`.
+Nous passons tous trop de temps devant nos écrans. La fatigue oculaire numérique est réelle.  
+**Eye Buddy** est là pour vous rappeler de faire une pause, mais pas n'importe comment : avec une interface **magnifique**, **apaisante** et **moderne**.
 
-## Structure du Projet
+### 🚀 Fonctionnalités Clés
 
-- `manifest.json` : Configuration de l'extension (Manifest V3).
-- `service-worker.js` : Script d'arrière-plan pour la gestion du minuteur.
-- `content.js` : Script injecté dans les pages pour afficher l'overlay.
-- `styles.css` : Styles de l'overlay.
-- `options.html` / `options.js` : Page de configuration.
-- `popup.html` / `popup.js` : Popup de l'extension.
+*   **⏱️ Règle 20-20-20 Automatisée** : Toutes les 20 minutes, une pause de 20 secondes vous est proposée.
+*   **🎨 Design Premium "Dark Plum"** : Une interface sombre et élégante avec des dégradés vibrants Rose/Jaune, inspirée des meilleures apps de méditation.
+*   **🌫️ Ambiance Zen** : Un fond animé avec un flou gaussien apaisant pour une immersion totale.
+*   **🔔 Notifications Discrètes** : Soyez averti en douceur quand il est temps de reposer vos yeux.
+*   **⚙️ 100% Configurable** : Ajustez les durées de travail et de pause selon vos besoins.
+*   **🖱️ Effet Parallax 3D** : L'interface réagit subtilement aux mouvements de votre souris pour un effet de profondeur unique.
 
-## Technologies
+---
 
-- HTML, CSS, JavaScript
-- Chrome Extension API (Manifest V3)
+## 📸 Aperçu
+
+| L'Écran de Pause (Overlay) | Le Menu Rapide (Popup) |
+|:--------------------------:|:----------------------:|
+| ![Overlay](https://via.placeholder.com/400x300/18121E/FF5ACD?text=Overlay+Zen) | ![Popup](https://via.placeholder.com/250x300/18121E/FBDA61?text=Menu+Popup) |
+| *Un flou artistique et un minuteur élégant.* | *Accès rapide pour une pause immédiate.* |
+
+---
+
+## 🛠️ Installation (Mode Développeur)
+
+Pour l'instant, Eye Buddy est en phase de développement. Voici comment l'installer sur votre navigateur Chrome, Brave ou Edge :
+
+1.  **Clonez ce dépôt** :
+    ```bash
+    git clone https://github.com/votre-username/EyeBuddy.git
+    ```
+2.  Ouvrez votre navigateur et allez sur la page des extensions :
+    *   Chrome : `chrome://extensions`
+    *   Edge : `edge://extensions`
+3.  Activez le **Mode développeur** (souvent un switch en haut à droite).
+4.  Cliquez sur le bouton **"Charger l'extension non empaquetée"** (Load unpacked).
+5.  Sélectionnez le dossier `EyeBuddy` que vous venez de cloner.
+
+🎉 **C'est tout !** L'icône Eye Buddy devrait apparaître dans votre barre d'outils.
+
+---
+
+## ⚙️ Technologies
+
+Développé avec ❤️ et les dernières normes web :
+
+*   **Manifest V3** : Pour une sécurité et une performance optimales.
+*   **Vanilla JS** : Léger et rapide, sans frameworks lourds.
+*   **CSS3 Moderne** : Gradients, Backdrop Filter, Animations, 3D Transforms.
+
+---
+
+## 🤝 Contribuer
+
+Les yeux fatigués du monde entier vous remercieront ! N'hésitez pas à proposer des Pull Requests pour :
+*   Ajouter de nouveaux thèmes.
+*   Améliorer les exercices de relaxation.
+*   Traduire l'extension.
+
+---
+
+*Fait par bastianfbr* 🌟
