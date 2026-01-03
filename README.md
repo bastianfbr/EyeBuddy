@@ -73,7 +73,6 @@ Eye Buddy a besoin de certaines permissions pour fonctionner correctement. Voici
 | Permission | Pourquoi ? |
 | :--- | :--- |
 | **`alarms`** | Pour gérer le minuteur de 20 minutes en arrière-plan de manière fiable. |
-| **`storage`** | Pour sauvegarder l'état interne (bien que la configuration soit maintenant fixe). |
 | **`notifications`** | Pour vous envoyer une petite alerte système avant que l'écran de pause n'apparaisse. |
 | **`scripting`** | Pour injecter l'écran de pause (overlay) sur la page web que vous consultez. |
 | **`activeTab`** | Pour interagir uniquement avec l'onglet que vous regardez au moment de la pause. |
